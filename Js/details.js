@@ -11,18 +11,23 @@ async function getDetail() {
     try {
     const response = await fetch(finalUrl);
     const result = await response.json();
-    if (!result.bornLocation) {
-        result.bornLocation = "Unknown";
-    }
     title.innerHTML = result.name ;
     headName.innerHTML = result.name;
-    container.innerHTML = `<div class=finalbox>
+    
+    
+        container.innerHTML = `<div class=finalbox>
                                 <img src=${result.image}>
                                 <h3>${result.name}</h3>
-                                <span>Born: ${result.bornLocation}</span>
-                                <span>Home: ${result.homeworld}</span>
+                                <ul class=affiliations><h4>Known affiliations:</h4></ul>
                                 <a href=${result.wiki}>Go to Wikipedia for more information...</a>
                             </div>`
+    const affiliations = document.querySelector(".affiliations");
+    const listAffiliation = result.affiliations;
+
+    for ( let i = 0; i < listAffiliation.length; i++) {
+        affiliations.innerHTML += `<li>${listAffiliation[i]}</li>`;
+    }
+    
 } catch(error) {
     container.innerHTML = `<p>An error has accured. Please try again later!!</p>`
 }

@@ -6,13 +6,12 @@ body {
     background: #1d1a18;
 }
 header {
-    
     display: block;
-    background-image: url(/Images/pxfuel.jpg);
+    background-image: url(/Images/a40e4680756243eb762e64c4954576ed.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top -50px center;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 500px;
     width: 100%;
 }
 .links {
@@ -32,15 +31,14 @@ header {
     display: block;
     margin: auto;
     text-align: center;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 h1 {
-    font-family: "Pollar one";
+    font-family: "Poller One";
     font-size: 100px;
     color: rgb(255, 217, 0);
     margin-top: 0;
     margin-bottom: 15px;
-    transform: perspective(50px)
 }
 h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -60,9 +58,12 @@ a {
     color: white;
 }
 .finalbox a {
-    color: rgb(255, 217, 0);
+    color: white;
     margin: 20px auto;
     text-decoration: underline solid white;
+}
+.finalbox a:hover {
+    color: rgb(255, 217, 0);
 }
 p {
     font-size: 1.125em;
@@ -78,7 +79,7 @@ main {
 }
 .container {
     display: flex;
-    max-width: 80%;
+    padding: 20px 150px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -106,8 +107,8 @@ main {
     } 
 .box {
     display: flex;
-    flex: 25%;
-    height: 500px;
+    flex: 30%;
+    height: 550px;
     color: white;
     flex-direction: column;
     border-radius: 10px;
@@ -117,26 +118,36 @@ main {
 .finalbox {
         display: flex;
         width: 30%;
-        height: 500px;
+        height: auto;
         color: white;
         flex-direction: column;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.083);
         padding: 10px 20px;
-        gap: 10px;
+        gap: 20px;
+}
+.affiliations  {
+    font-size: 1.25em;
+    
+}
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.125em;
 }
 .box:hover {
     cursor: pointer;
     transform: scale(102%);
     transition: 200ms ease-in-out;
     background-color: rgba(255, 255, 255, 0.194);
-
 }
 .box h3, .finalbox h3 {
     text-align: center;
     margin-bottom: 20px;
 }
 .box img, .finalbox img {
+    max-width: 80%;
     height: 200px;
     margin: 10px auto;
 }
@@ -150,8 +161,11 @@ button {
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
 }
-
+button:hover {
+    transform: scale(105%);
+}
 i {
     color: white;
     left: 150px;
@@ -162,4 +176,9 @@ footer {
     display: flex;
     justify-content: end;
     background-color:#1d1a18;
+}
+@media screen and (max-width: 900px) {
+    .box {
+        flex: 100%;
+    }
 }
