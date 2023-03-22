@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-const headName = document.querySelector("h1");
 const title = document.querySelector("title");
 const url = 'https://rawcdn.githack.com/akabab/starwars-api/0.2.1/api/id/'
 const queryString = document.location.search;
@@ -12,10 +11,8 @@ async function getDetail() {
     const response = await fetch(finalUrl);
     const result = await response.json();
     title.innerHTML = result.name ;
-    headName.innerHTML = result.name;
     
-    
-        container.innerHTML = `<div class=finalbox>
+    container.innerHTML = `<div class=finalbox>
                                 <img src=${result.image}>
                                 <h3>${result.name}</h3>
                                 <ul class=affiliations><h4>Known affiliations:</h4></ul>
@@ -30,6 +27,8 @@ async function getDetail() {
     
 } catch(error) {
     container.innerHTML = `<p>An error has accured. Please try again later!!</p>`
+} finally {
+    console.log(`May the force be with you...`);
 }
 }
 getDetail();

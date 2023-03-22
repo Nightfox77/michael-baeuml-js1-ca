@@ -1,18 +1,21 @@
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 body {
     margin: 0;
     background: #1d1a18;
 }
-header {
+#header {
     display: block;
-    background-image: url(/Images/a40e4680756243eb762e64c4954576ed.jpg);
+    margin: 0 auto;
+    background-image: url(/Images/wp2903046-starwars-background.jpg);
     background-size: cover;
-    background-position: top -50px center;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
     width: 100%;
+    min-height: 500px;
 }
 .links {
     display: flex;
@@ -28,14 +31,14 @@ header {
     text-decoration: underline;
 }
 .welcome {
-    display: block;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding-top: 150px;
 }
 h1 {
     font-family: "Poller One";
-    font-size: 100px;
+    font-size: 6em;
     color: rgb(255, 217, 0);
     margin-top: 0;
     margin-bottom: 15px;
@@ -48,8 +51,9 @@ h2 {
     letter-spacing: 4px;
 }
 h3 {
+    font-family: "Poller One";
     color: rgb(255, 217, 0);
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
     letter-spacing: 4px;
 }
@@ -64,10 +68,12 @@ a {
 }
 .finalbox a:hover {
     color: rgb(255, 217, 0);
+    text-decoration: underline solid rgb(255, 217, 0);
 }
 p {
     font-size: 1.125em;
     color: white;
+    
 }
 span {
     font-size: 1.25em;
@@ -79,7 +85,7 @@ main {
 }
 .container {
     display: flex;
-    padding: 20px 150px;
+    padding: 20px 0;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -107,17 +113,18 @@ main {
     } 
 .box {
     display: flex;
-    flex: 30%;
+    width: 25%;
     height: 550px;
     color: white;
     flex-direction: column;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.083);
     padding: 10px;
+    box-sizing: border-box;
 }
 .finalbox {
         display: flex;
-        width: 30%;
+        width: 40%;
         height: auto;
         color: white;
         flex-direction: column;
@@ -125,10 +132,10 @@ main {
         background-color: rgba(255, 255, 255, 0.083);
         padding: 10px 20px;
         gap: 20px;
+        border: 1px solid  rgb(255, 217, 0);
 }
 .affiliations  {
     font-size: 1.25em;
-    
 }
 .inputbox {
     display: flex;
@@ -136,18 +143,22 @@ main {
     gap: 15px;
     font-size: 1.125em;
 }
+.inputbox input {
+    height: 20px;
+}
 .box:hover {
     cursor: pointer;
     transform: scale(102%);
     transition: 200ms ease-in-out;
-    background-color: rgba(255, 255, 255, 0.194);
+    
+    border: 1px solid rgb(255, 217, 0);
 }
 .box h3, .finalbox h3 {
     text-align: center;
     margin-bottom: 20px;
 }
 .box img, .finalbox img {
-    max-width: 80%;
+    max-width: 90%;
     height: 200px;
     margin: 10px auto;
 }
@@ -178,7 +189,15 @@ footer {
     background-color:#1d1a18;
 }
 @media screen and (max-width: 900px) {
-    .box {
-        flex: 100%;
+    .box, .finalbox {
+       width: 70%;
     }
+    #header {
+        padding-bottom: 50px;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
 }

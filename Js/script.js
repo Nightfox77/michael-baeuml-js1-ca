@@ -7,15 +7,14 @@ async function getData() {
         const result = await response.json();
         console.log(result)
         container.innerHTML = "";
+        
         for (let i = 0; i < result.length; i++) {
             const affiliation = result[i].affiliations;
             
             if (affiliation.length === 0) {
-                continue;
-                } 
-            if (!result[i].homeworld) {
-                continue;
-            }
+                affiliation = `Unknown`
+            } 
+           
             if (!result[i].born) {
                 result[i].born = "Unknown";
             }
