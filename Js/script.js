@@ -9,12 +9,9 @@ async function getData() {
         container.innerHTML = "";
         
         for (let i = 0; i < result.length; i++) {
-            const affiliation = result[i].affiliations;
-            
-            if (affiliation.length === 0) {
-                affiliation = `Unknown`
-            } 
-           
+            if (!result[i].homeworld) {
+                result[i].homeworld = "Unknown";
+            }
             if (!result[i].born) {
                 result[i].born = "Unknown";
             }
@@ -22,7 +19,7 @@ async function getData() {
                 result[i].died = "Unknown";
             }
             container.innerHTML += `<a href="details.html?id=${result[i].id}" class="box">
-                                        <img src=${result[i].image} alt="Picture of:"${result[i].name}>
+                                        <img src=${result[i].image}  alt="Picture of:"${result[i].name}>
                                         <h3>${result[i].name}</h3>
                                         <p>Home: ${result[i].homeworld}</p>
                                         <p>Species: ${result[i].species}</p>

@@ -10,9 +10,10 @@ body {
 #header {
     display: block;
     margin: 0 auto;
-    background-image: url(/Images/wp2903046-starwars-background.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: black;
+    background-image: url(/Images/sword\ cast\ star\ wars\ coffee\ star\ war\ force\ star\ wars.jpg);
+    background-size: contain;
+    background-position: right 0px center;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 500px;
@@ -123,16 +124,16 @@ main {
     box-sizing: border-box;
 }
 .finalbox {
-        display: flex;
-        width: 40%;
-        height: auto;
-        color: white;
-        flex-direction: column;
-        border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.083);
-        padding: 10px 20px;
-        gap: 20px;
-        border: 1px solid  rgb(255, 217, 0);
+    display: flex;
+    width: 40%;
+    height: auto;
+    color: white;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.083);
+    padding: 10px 20px;
+    gap: 20px;
+    border: 1px solid  rgb(255, 217, 0);
 }
 .affiliations  {
     font-size: 1.25em;
