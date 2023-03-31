@@ -12,7 +12,7 @@ async function getDetail() {
     const result = await response.json();
     title.innerHTML = result.name ;
     
-    container.innerHTML = `<div class=finalbox>
+    container.innerHTML = `<div class=formbox>
                                 <img src=${result.image}>
                                 <h3>${result.name}</h3>
                                 <ul class=affiliations><h4>Known affiliations:</h4></ul>
