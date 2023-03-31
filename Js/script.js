@@ -44,6 +44,8 @@ async function getData() {
         }
     } catch(error) {
         container.innerHTML =`<p>An error has accured. Please try again later!!</p>`
+    } finally {
+        console.log(`May the force be with you...`);
     }
                     
 }
