@@ -109,7 +109,7 @@ main {
     100% {
         transform: rotate(360deg);
     }
-    } 
+} 
 .box {
     display: flex;
     width: 25%;
@@ -152,7 +152,6 @@ span {
     color: red;
     margin: 0;
     padding: 0;
-
 }
 .inputbox {
     display: inline-block;
@@ -210,18 +209,15 @@ footer {
     #header {
         padding-bottom: 50px;
     }
-    
     .container {
         flex-direction: column;
     }
     h1 {
         font-size: 5em;
     }
-    
 }
 @media screen and (max-width: 1150px) {
     #header {
     background-image: url("");
     }
-
 }
