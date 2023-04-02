@@ -13,7 +13,7 @@ body {
     background-color: black;
     background-image: url(/Images/Trooper.png);
     background-size: contain;
-    background-position: right 0px center;
+    background-position: right center;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 500px;
@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 200px;
 }
 h1 {
     font-family: "Poller One";

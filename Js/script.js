@@ -9,13 +9,13 @@ async function getData() {
         
         for (let i = 0; i < result.length; i++) {
             if (!result[i].homeworld) {
-                result[i].homeworld = "Unknown";
+                result[i].homeworld = "unknown";
             }
             if (!result[i].born) {
-                result[i].born = "Unknown";
+                result[i].born = "unknown";
             }
             if (!result[i].died) {
-                result[i].died = "Unknown";
+                result[i].died = "unknown";
             }
             
             container.innerHTML += `<a href="details.html?id=${result[i].id}" class="box">

@@ -1,22 +1,29 @@
 const form = document.querySelector(".formbox");
 const fullName = document.querySelector("#name");
-const email = document.querySelector("#email");
+const mail = document.querySelector("#email");
 const subject = document.querySelector("#subject");
 const address = document.querySelector("#address");
 const nameError = document.querySelector("#nameError");
-const emailError = document.querySelector("#emailError");
+const mailError = document.querySelector("#emailError");
 const subjectError = document.querySelector("#subjectError");
 const addressError = document.querySelector("#addressError");
 const success = document.querySelector(".success");
 
 function validateForm (){
     event.preventDefault();
-    const allValid = true;
+    let allValid = false;
     if(lengthCheck(fullName.value, 0) === true) {
         nameError.style.display = "none";
     } 
     else {
         nameError.style.display = "block";
+        allValid = false;
+    }
+    if(emailValidation(mail.value) === true){
+        emailError.style.display = "none";
+    }
+    else {
+        emailError.style.display = "block";
         allValid = false;
     }
     if(lengthCheck(subject.value, 10) === true) {
@@ -33,15 +40,9 @@ function validateForm (){
         addressError.style.display = "block";
         allValid = false;
     }
-    if(emailValidation(email.value) === true){
-        emailError.style.display = "none";
-    }
-    else {
-        emailError.style.display = "block";
-        allValid = false;
-    }
+    
     if(allValid === true) {
-        success.innerHTML += `<h1 style="color:green">All inputs are valid</h1>`;
+        success.innerHTML = `<h1 style="color:green">All inputs are valid</h1>`;
     } 
 }
 
@@ -55,8 +56,8 @@ function lengthCheck(value, len) {
         return false;
     }
 }
-function emailValidation(email) {
+function emailValidation(emailValue) {
     const regEx = /\S+@\S+\.\S+/;
-    const matchingPattern = regEx.test(email);
+    const matchingPattern = regEx.test(emailValue);
     return matchingPattern;
 }
