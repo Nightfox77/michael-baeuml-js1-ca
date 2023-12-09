@@ -1,6 +1,6 @@
 # Star Wars Characters Website
 
-![image][(https://github.com/Nightfox77/Portfolio/blob/main/Images-Icons/Star-Wars-Home%20(1).JPG)]
+![image](https://github.com/Nightfox77/Portfolio/blob/main/Images-Icons/Star-Wars-Home%20(1).JPG)
 
 A Website with most of the characters of the Star Wars universe
 
